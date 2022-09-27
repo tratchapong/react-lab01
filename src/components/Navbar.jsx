@@ -1,3 +1,5 @@
+// https://reactrouter.com/en/main/components/nav-link
+
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -5,7 +7,7 @@ function Navbar() {
   // let activeClassName = "active";
   return (
     <div className="navbar">
-      <NavLink to="/home" >Home</NavLink>
+      <NavLink end to="/" >Home</NavLink>
       <NavLink to="/about">About</NavLink>
       <NavLink to="/dashboard">Dashboard</NavLink>
       {/* <NavLink
