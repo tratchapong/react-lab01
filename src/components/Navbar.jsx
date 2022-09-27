@@ -10,6 +10,7 @@ function Navbar() {
       <NavLink end to="/" >Home</NavLink>
       <NavLink to="/about">About</NavLink>
       <NavLink to="/dashboard">Dashboard</NavLink>
+      <NavLink to="/login">Login</NavLink>
       {/* <NavLink
         to="/home"
         className={({ isActive }) => (isActive ? activeClassName : undefined)}
