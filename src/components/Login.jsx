@@ -11,7 +11,7 @@ function Login() {
           <p>Please login.</p>
           <hr />
 
-          <label for="email">
+          <label htmlFor="email">
             <b>Email</b>
           </label>
           <input
@@ -22,7 +22,7 @@ function Login() {
             required
           />
 
-          <label for="psw">
+          <label htmlFor="psw">
             <b>Password</b>
           </label>
           <input
