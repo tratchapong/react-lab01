@@ -1,10 +1,9 @@
-import AllButton from "./AllButton";
-import MyAccordian from "./MyAccordian";
+import Router from "./route/Router";
+
 
 function App() {
   return <div className="App">
-    <MyAccordian />
-    <AllButton />
+    <Router />
   </div>;
 }
 
