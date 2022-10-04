@@ -4,7 +4,7 @@ function Product(props) {
   const {item} = props
   return (
     <div className="rounded overflow-hidden shadow-lg max-h-fit p-3">
-      <div className=" p-2 h-52">
+      <div className=" p-2 h-52 cursor-pointer">
         <img className="w-4/5 h-full object-contain mx-auto min-w-[200px]" src={item.image} alt={item.category} />
       </div>
       <div className="px-6 py-4">
