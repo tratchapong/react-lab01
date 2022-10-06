@@ -2,27 +2,26 @@
 
 import React, { useEffect, useRef } from "react";
 
-let slidesCount 
-let maxLeft
-let current
-
 function Carousel() {
   const slidesEl = useRef(null)
+  const slidesCount = useRef()
+  const maxLeft = useRef()
+  const activeSlide = useRef(0)
   
   useEffect(() => {
-    slidesCount = slidesEl.current.childElementCount
-    maxLeft = (slidesCount - 1) * 100 * -1;
-    current = 0
+    slidesCount.current = slidesEl.current.childElementCount
+    maxLeft.current = (slidesCount.current - 1) * 100 * -1;
+    activeSlide.current = 0
   }, [])
 
   function changeSlide(next = true) {
     if (next) {
-      current += current > maxLeft ? -100 : current * -1;
+      activeSlide.current += (activeSlide.current > maxLeft.current) ? -100 : activeSlide.current * -1;
     } else {
-      current = current < 0 ? current + 100 : maxLeft;
+      activeSlide.current = (activeSlide.current < 0) ? activeSlide.current + 100 : maxLeft;
     }
   
-    slidesEl.current.style.left = current + "%";
+    slidesEl.current.style.left = activeSlide.current + "%";
   }
   
   return (
