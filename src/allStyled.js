@@ -28,4 +28,16 @@ const Button = styled.a`
   ${props => props.third && 'background: violet; color: brown'}
 `
 
-export {Button}
+const Title = styled.h1`
+  width: 60%;
+  margin: auto;
+  color: white;
+  background: blue;
+  ${props => props.dark && 'background: silver;'} 
+`
+
+
+// const Backdrop = styled.div`
+
+// `
+export {Button, Title}
