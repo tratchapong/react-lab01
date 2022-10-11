@@ -24,6 +24,8 @@ const Button = styled.a`
   background: deeppink;
   color: silver;
 `}
+
+  ${props => props.third && 'background: violet; color: brown'}
 `
 
 export {Button}
