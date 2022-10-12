@@ -52,9 +52,9 @@ const TitleTW = styled.h1.attrs({
 `
 
 
-const TitleSize = styled.h1.attrs( (props)=> ({
-  className : `p-3 w-3/4 mx-auto text-white bg-blue-800 ${props.big ? 'text-5xl' : 'text-md' }`
+export const TitleSize = styled.h1.attrs( (props)=> ({
+  className : `p-3 w-3/4 mx-auto text-white bg-blue-800 text-center ${props.big ? 'text-5xl' : 'text-md' }`
 }))``
 
 
-export {Button, Title, TitleTW, TitleSize}
+export {Button, Title, TitleTW}
