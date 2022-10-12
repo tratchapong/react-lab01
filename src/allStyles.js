@@ -56,5 +56,9 @@ export const TitleSize = styled.h1.attrs( (props)=> ({
   className : `p-3 w-3/4 mx-auto text-white bg-blue-800 text-center ${props.big ? 'text-5xl' : 'text-md' }`
 }))``
 
+export const FlexCenter = styled.div.attrs( props => ({
+  className : 'flex justify-center items-center'
+}))``
+
 
 export {Button, Title, TitleTW}
