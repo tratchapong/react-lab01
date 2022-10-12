@@ -36,8 +36,9 @@ const Title = styled.h1`
   ${props => props.dark && 'background: silver;'} 
 `
 
+const TitleBS = styled.h1.attrs({
+  className : 'text-primary bg-danger display-1 text-center'
+})``
 
-// const Backdrop = styled.div`
 
-// `
-export {Button, Title}
+export {Button, Title, TitleBS}

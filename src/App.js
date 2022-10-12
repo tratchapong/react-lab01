@@ -1,8 +1,11 @@
-import {Button} from './allStyled'
+import {Button, TitleBS} from './allStyled'
 import { MyButton } from './myStyled';
 import OldButton from './OldButton';
 function App() {
   return <div className="App">
+
+    <TitleBS>Codecamp#12</TitleBS>
+    <hr />
     <Button>OK</Button>
     <Button primary>Restoration</Button>
     <Button secondary>Codecamp</Button>
