@@ -41,8 +41,20 @@ const Title = styled.h1`
 // })``
 
 const TitleTW = styled.h1.attrs({
-  className : 'text-3xl font-bold underline text-white bg-violet-700 rounded shadow-sm w-3/4 mx-auto text-center py-3'
-})``
+  className : 'text-3xl font-bold underline text-white bg-violet-700 rounded shadow-sm w-3/4 mx-auto text-center py-3 hover:bg-slate-600'
+})`
+  background: red;
+  cursor: pointer;
+
+  &:hover {
+    color: lime;
+  }
+`
 
 
-export {Button, Title, TitleTW}
+const TitleSize = styled.h1.attrs( (props)=> ({
+  className : `p-3 w-3/4 mx-auto text-white bg-blue-800 ${props.big ? 'text-5xl' : 'text-md' }`
+}))``
+
+
+export {Button, Title, TitleTW, TitleSize}
