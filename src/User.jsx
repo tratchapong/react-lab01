@@ -7,31 +7,31 @@ const User = () => {
   const id = useLocation().pathname.split("/")[2];
 
   // NO-CLEAN-UP
-  useEffect(()=>{
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-    .then((res) => res.json())
-    .then((data) => {
-      setUser(data);
-    });
-  },[id])
+  // useEffect(()=>{
+  //   fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     setUser(data);
+  //   });
+  // },[id])
 
   //FETCH AND CLEAN-UP
 
-  // useEffect(() => {
-  //   let unsubscribed = false;
-  //   fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       if (!unsubscribed) {
-  //         setUser(data);
-  //       }
-  //     });
+  useEffect(() => {
+    let unsubscribed = false;
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!unsubscribed) {
+          setUser(data);
+        }
+      });
 
-  //   return () => {
-  //     console.log("cancelled! or cleanup")
-  //     unsubscribed = true;
-  //   };
-  // }, [id]);
+    return () => {
+      console.log("cancelled! or cleanup")
+      unsubscribed = true;
+    };
+  }, [id]);
 
   //FETCH AND ABORT
 

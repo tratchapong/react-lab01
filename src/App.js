@@ -1,4 +1,4 @@
-// Best useEfect + RestrictMode + Cleanup example from LamaDev (Youtube)
+// Best useEfect + StrictMode + Cleanup example from LamaDev (Youtube)
 // resource : https://www.youtube.com/watch?v=QQYeipc_cik
 
 
